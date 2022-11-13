@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Focus - Bootstrap Admin Dashboard </title>
+    <title>Checko - Human Resource Information System</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
-    <!-- Datatable -->
-    <link href="./vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
-    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vendor/owl-carousel/css/owl.theme.default.min.css">
+    <link href="./vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -41,7 +43,7 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
+            <a href="emp-index.html" class="brand-logo">
                 <img class="logo-abbr" src="./images/logo.png" alt="">
                 <img class="logo-compact" src="./images/logo-text.png" alt="">
                 <img class="brand-title" src="./images/logo-text.png" alt="">
@@ -76,7 +78,9 @@
                                 </div>
                             </div>
                         </div>
-
+                          <!--**********************************
+                                       Notification Section
+                          ***********************************-->
                         <ul class="navbar-nav header-right">
                             <li class="nav-item dropdown notification_dropdown">
                                 <a class="nav-link" href="#" role="button" data-toggle="dropdown">
@@ -175,52 +179,31 @@
                     <li class="nav-label first">Main Menu</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                         class="icon icon-home"></i><span class="nav-text">Home</span></a>
-                <ul aria-expanded="false">
-                    <li><a href="./dashboard.html">Dashboard</a></li>
-                    <li><a href="./lates.html">Lates</a></li>
-                    <li><a href="./absences.html">Absences</a></li>
-                    <li><a href="./leave.html">Leaves</a></li>
-                    <li><a href="./resignation.html">Resignation</a></li>
-                    <li><a href="./overtime.html">Overtimes</a></li>
-                    
-                </ul>
+                        <ul aria-expanded="false">
+                            <li><a href="./emp-dashboard.html">Dashboard</a></li>
+                            <li><a href="./emp-timecard.html">Time In/ Time Out</a></li>
+                            <li><a href="./emp-leavereq.html">Leave Request</a></li>       
+                        </ul>
             </li>
             <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                        class="icon icon-app-store"></i><span class="nav-text">Company</span></a>
+                        class="icon icon-app-store"></i><span class="nav-text">Personal</span></a>
                 <ul aria-expanded="false">
+                    <li><a href="./emp-profile.html">Profile</a></li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
                         <ul aria-expanded="false">
-                            <li><a href="./email-compose.html">Compose</a></li>
-                            <li><a href="./email-inbox.html">Inbox</a></li>
-                            <li><a href="./email-read.html">Read</a></li>
+                            <li><a href="./emp-email-compose.html">Compose</a></li>
+                            <li><a href="./emp-email-inbox.html">Inbox</a></li>
+                            <li><a href="./emp-email-read.html">Read</a></li>
                         </ul>
                     </li>
-                    <li><a href="./app-calender.html">Calendar</a></li>
+                    <li><a href="./emp-app-calender.html">Calendar</a></li>
                 </ul>
             </li>
-            <li class="nav-label">Tables and Reports</li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                        class="icon icon-layout-25"></i><span class="nav-text">Table</span></a>
-                <ul aria-expanded="false">
-                    <li><a href="ranking.html">Ranking</a></li>
-                    <li><a href="leaveRequest.html">Leave Request</a></li>
-                    <li><a href="employeeInformation.html">Employee Information</a></li>
-                    <li><a href="trainings.html">Trainings</a></li>
-                </ul>
-            </li>
-
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                        class="icon icon-layout-25"></i><span class="nav-text">Prediction</span></a>
-                <ul aria-expanded="false">
-                    <li><a href="promotion.html">Promotion</a></li>
-                    <li><a href="resignationPredict.html">Resignation</a></li>
-        </ul>
-    </li>
                     <li class="nav-label">General</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-single-copy-06"></i><span class="nav-text">Account</span></a>
                                 <ul aria-expanded="false">
-                                    <li><a href="settings.html">Settings</a></li>
+                                    <li><a href="emp-settings.html">Settings</a></li>
                                     <li><a href="landingPage.html">Logout</a></li>
                                 </ul>
                     </li>    
@@ -238,67 +221,113 @@
             Content body start
         ***********************************-->
         <div class="content-body">
+            <!-- row -->
             <div class="container-fluid">
-                <div class="row page-titles mx-0">
-                    <div class="col-sm-6 p-md-0">
-                        <div class="welcome-text">
-                            <h4>Hi, welcome back!</h4>
-                            <p class="mb-0">This is the table for employee leave requests.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- row -->
-
-
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-lg-3 col-sm-6">
                         <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Employee Ranking</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table id="example" class="display" style="min-width: 845px">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Performance</th>
-                                                <th>Rank</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>High Performing</td>
-                                                <td>61</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Under Performing</td>
-                                                <td>100</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>Under Performing</td>
-                                                <td>99</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            <div class="stat-widget-two card-body">
+                                <div class="stat-content">
+                                    <div class="stat-text">Lates</div>
+                                    <div class="stat-digit"> <i class=""></i> 500</div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger w-65" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-two card-body">
+                                <div class="stat-content">
+                                    <div class="stat-text">Absences</div>
+                                    <div class="stat-digit"> <i class=""></i> 500</div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger w-65" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-two card-body">
+                                <div class="stat-content">
+                                    <div class="stat-text">Leaves</div>
+                                    <div class="stat-digit"> <i class=""></i> 500</div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger w-65" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="card">
+                            <div class="stat-widget-two card-body">
+                                <div class="stat-content">
+                                    <div class="stat-text">Overtimes</div>
+                                    <div class="stat-digit"> <i class=""></i>650</div>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger w-65" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                    <!-- /# column -->
                 </div>
-            </div>
-        </div>
+                
+                <div class="row">
+                    <div class="col-xl-8 col-lg-8 col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Employee Overview</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-8">
+                                        <div id="employeeOverview-bar-chart"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="m-t-10">
+                                    <h4 class="card-title">Employee Performance</h4>
+                                    <h2 class="mt-3">8500</h2>
+                                </div>
+                                <div class="widget-card-circle mt-5 mb-5" id="employeeOverview-circle-card">
+                                    <i class="ti-control-shuffle pa"></i>
+                                </div>
+                                <ul class="widget-line-list m-b-15">
+                                    <li class="border-right">92% <br><span class="text-success"><i
+                                                class="ti-hand-point-up"></i> Positive</span></li>
+                                    <li>8% <br><span class="text-danger"><i
+                                                class="ti-hand-point-down"></i>Negative</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
         <!--**********************************
             Content body end
         ***********************************-->
- 
+        <!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
     </div>
     <!--**********************************
         Main wrapper end
@@ -311,12 +340,32 @@
     <script src="./vendor/global/global.min.js"></script>
     <script src="./js/quixnav-init.js"></script>
     <script src="./js/custom.min.js"></script>
-    
 
 
-    <!-- Datatable -->
-    <script src="./vendor/datatables/js/jquery.dataTables.min.js"></script>
-    <script src="./js/plugins-init/datatables.init.js"></script>
+    <!-- Vectormap -->
+    <script src="./vendor/raphael/raphael.min.js"></script>
+    <script src="./vendor/morris/morris.min.js"></script>
+
+
+    <script src="./vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="./vendor/chart.js/Chart.bundle.min.js"></script>
+
+    <script src="./vendor/gaugeJS/dist/gauge.min.js"></script>
+
+    <!--  flot-chart js -->
+    <script src="./vendor/flot/jquery.flot.js"></script>
+    <script src="./vendor/flot/jquery.flot.resize.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="./vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- Counter Up -->
+    <script src="./vendor/jqvmap/js/jquery.vmap.min.js"></script>
+    <script src="./vendor/jqvmap/js/jquery.vmap.usa.js"></script>
+    <script src="./vendor/jquery.counterup/jquery.counterup.min.js"></script>
+
+
+    <script src="./js/dashboard/dashboard-1.js"></script>
 
 </body>
 
