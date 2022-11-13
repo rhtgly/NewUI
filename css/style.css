@@ -3553,6 +3553,13 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   padding: 1.25rem; }
 
+.card-body td{
+  color: #000;
+}
+.card-body th{
+  color: #000;
+}
+
 .card-title {
   margin-bottom: 0.75rem; }
 
@@ -4099,8 +4106,8 @@ input[type="button"].btn-block {
   .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #593bdb;
-    border-color: #593bdb; }
+    background-color: #454545;
+    border-color: #454545; }
 
 .list-group-horizontal {
   flex-direction: row; }
@@ -7847,7 +7854,7 @@ li {
   list-style: none; }
 
 a {
-  color: #BDBDC7; }
+  color: #810000; }
   a:hover, a:focus, a.active {
     text-decoration: none; }
 
@@ -12776,8 +12783,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     color: #cccccc; }
   .mail-list .list-group-item.active {
     color: #fff; }
-    .mail-list .list-group-item.active i {
-      color: #593bdb; }
+
 
 .chat-wrap {
   padding: 1.0625rem 1.875rem; }
@@ -15035,7 +15041,10 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   background-color: #50E3C2; }
 
 .badge-primary {
-  background-color: #593bdb; }
+  background-color: #FF1616; }
+
+.badge-primary span {
+  background-color: #000; }
 
 .badge-warning {
   background-color: #FFAA16; }
@@ -15069,7 +15078,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 .page-titles {
   padding: 0.9375rem 1.25rem;
-  background: #fff;
+  background: #810000;
   margin-bottom: 30px;
   border-radius: 5px; }
   [data-theme-version="dark"] .page-titles {
@@ -15084,7 +15093,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
   .page-titles h4 {
     margin-bottom: 0;
     margin-top: 0;
-    color: #593bdb;
+    color: #ffffff;
     font-size: 1.25rem; }
     .page-titles h4 span {
       font-size: 0.875rem;
@@ -16790,8 +16799,8 @@ table.dataTable tfoot th {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
   border-radius: 50%;
-  color: #593bdb !important;
-  background: rgba(89, 59, 219, 0.1);
+  color: #ffffff !important;
+  background: #810000;
   border: 0 !important; }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
@@ -16914,6 +16923,10 @@ table.dataTable.display tbody td {
           color: #fff;
           font-size: 14px;
           padding: 0px 7px; }
+    
+  .welcome-text .mb-0{
+    color: #ffffff;
+  }
 
 .auth-form {
   padding: 50px 50px; }

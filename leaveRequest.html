@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Checko - Human Resource Information System </title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <!-- Custom Stylesheet -->
+    <link href="./css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+                <img class="logo-abbr" src="./images/logo.png" alt="">
+                <img class="logo-compact" src="./images/logo-text.png" alt="">
+                <img class="brand-title" src="./images/logo-text.png" alt="">
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="search_bar dropdown">
+                                <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
+                                    <i class="mdi mdi-magnify"></i>
+                                </span>
+                                <div class="dropdown-menu p-0 m-0">
+                                    <form>
+                                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav header-right">
+                            <li class="nav-item dropdown notification_dropdown">
+                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                    <i class="mdi mdi-bell"></i>
+                                    <div class="pulse-css"></div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <ul class="list-unstyled">
+                                        <li class="media dropdown-item">
+                                            <span class="success"><i class="ti-user"></i></span>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <p><strong>Martin</strong> has added a <strong>customer</strong> Successfully
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <span class="notify-time">3:20 am</span>
+                                        </li>
+                                        <li class="media dropdown-item">
+                                            <span class="primary"><i class="ti-shopping-cart"></i></span>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <p><strong>Jennifer</strong> purchased Light Dashboard 2.0.</p>
+                                                </a>
+                                            </div>
+                                            <span class="notify-time">3:20 am</span>
+                                        </li>
+                                        <li class="media dropdown-item">
+                                            <span class="danger"><i class="ti-bookmark"></i></span>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <p><strong>Robin</strong> marked a <strong>ticket</strong> as unsolved.
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <span class="notify-time">3:20 am</span>
+                                        </li>
+                                        <li class="media dropdown-item">
+                                            <span class="primary"><i class="ti-heart"></i></span>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <p><strong>David</strong> purchased Light Dashboard 1.0.</p>
+                                                </a>
+                                            </div>
+                                            <span class="notify-time">3:20 am</span>
+                                        </li>
+                                        <li class="media dropdown-item">
+                                            <span class="success"><i class="ti-image"></i></span>
+                                            <div class="media-body">
+                                                <a href="#">
+                                                    <p><strong> James.</strong> has added a<strong>customer</strong> Successfully
+                                                    </p>
+                                                </a>
+                                            </div>
+                                            <span class="notify-time">3:20 am</span>
+                                        </li>
+                                    </ul>
+                                    <a class="all-notification" href="#">See all notifications <i
+                                            class="ti-arrow-right"></i></a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                    <i class="mdi mdi-account"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="./app-profile.html" class="dropdown-item">
+                                        <i class="icon-user"></i>
+                                        <span class="ml-2">Profile </span>
+                                    </a>
+                                    <a href="./email-inbox.html" class="dropdown-item">
+                                        <i class="icon-envelope-open"></i>
+                                        <span class="ml-2">Inbox </span>
+                                    </a>
+                                    <a href="./page-login.html" class="dropdown-item">
+                                        <i class="icon-key"></i>
+                                        <span class="ml-2">Logout </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="quixnav">
+            <div class="quixnav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label first">Main Menu</li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                        class="icon icon-home"></i><span class="nav-text">Home</span></a>
+                <ul aria-expanded="false">
+                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="./lates.html">Lates</a></li>
+                    <li><a href="./absences.html">Absences</a></li>
+                    <li><a href="./leave.html">Leaves</a></li>
+                    <li><a href="./resignation.html">Resignation</a></li>
+                    <li><a href="./overtime.html">Overtimes</a></li>
+                    
+                </ul>
+            </li>
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                        class="icon icon-app-store"></i><span class="nav-text">Company</span></a>
+                <ul aria-expanded="false">
+                    <li><a href="./app-profile.html">Profile</a></li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
+                        <ul aria-expanded="false">
+                            <li><a href="./email-compose.html">Compose</a></li>
+                            <li><a href="./email-inbox.html">Inbox</a></li>
+                            <li><a href="./email-read.html">Read</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./app-calender.html">Calendar</a></li>
+                </ul>
+            </li>
+            <li class="nav-label">Tables and Reports</li>
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                        class="icon icon-layout-25"></i><span class="nav-text">Table</span></a>
+                <ul aria-expanded="false">
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="leaveRequest.html">Leave Request</a></li>
+                    <li><a href="employeeInformation.html">Employee Information</a></li>
+                    <li><a href="trainings.html">Trainings</a></li>
+                </ul>
+            </li>
+
+            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                        class="icon icon-layout-25"></i><span class="nav-text">Prediction</span></a>
+                <ul aria-expanded="false">
+                    <li><a href="promotion.html">Promotion</a></li>
+                    <li><a href="resignationPredict.html">Resignation</a></li>
+        </ul>
+    </li>
+                    <li class="nav-label">General</li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                                class="icon icon-single-copy-06"></i><span class="nav-text">Account</span></a>
+                                <ul aria-expanded="false">
+                                    <li><a href="settings.html">Settings</a></li>
+                                    <li><a href="landingPage.html">Logout</a></li>
+                                </ul>
+                    </li>    
+
+                </ul>
+            </div>
+
+
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Hi, welcome back!</h4>
+                            <p class="mb-0">This is the table for employee leave requests.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- row -->
+
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Employee Leave Request</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered verticle-middle table-responsive-sm">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Starting Date</th>
+                                                <th scope="col">End Date</th>
+                                                <th scope="col">Reason</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Jane Doe</td>
+                                                <td>September 23, 2022</td>
+                                                <td>Apr 20,2018</td>
+                                                <td>Vacation</td>
+                                                <td><span class="badge badge-success">Accepted</span>
+                                                <td>
+                                                    <span>
+                                                        <a href="javascript:void()" class="mr-4" data-toggle="tooltip"
+                                                            data-placement="top" title="Edit"><i
+                                                                class="fa fa-pencil color-muted"></i> </a>
+                                                        <a href="javascript:void()" data-toggle="tooltip"
+                                                            data-placement="top" title="Close"><i
+                                                                class="fa fa-close color-danger"></i></a>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>John Doe</td>
+                                                <td>September 23, 2022</td>
+                                                <td>Apr 20,2018</td>
+                                                <td>Vacation</td>
+                                                <td><span class="badge badge-danger">Declined</span>
+                                                <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
+                                                            data-placement="top" title="Edit"><i
+                                                                class="fa fa-pencil color-muted"></i> </a><a
+                                                            href="javascript:void()" data-toggle="tooltip"
+                                                            data-placement="top" title="Close"><i
+                                                                class="fa fa-close color-danger"></i></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Jane De Leon</td>
+                                                <td>September 23, 2022</td>
+                                                <td>Apr 20,2018</td>
+                                                <td>Vacation</td>
+                                                <td><span class="badge badge-default">Pending</span>
+                                                <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
+                                                            data-placement="top" title="Edit"><i
+                                                                class="fa fa-pencil color-muted"></i> </a><a
+                                                            href="javascript:void()" data-toggle="tooltip"
+                                                            data-placement="top" title="Close"><i
+                                                                class="fa fa-close color-danger"></i></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kylie Versoza</td>
+                                                <td>September 23, 2022</td>
+                                                <td>Apr 20,2018</td>
+                                                <td>Vacation</td>
+                                                <td><span class="badge badge-default">Pending</span>
+                                                <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
+                                                            data-placement="top" title="Edit"><i
+                                                                class="fa fa-pencil color-muted"></i> </a><a
+                                                            href="javascript:void()" data-toggle="tooltip"
+                                                            data-placement="top" title="Close"><i
+                                                                class="fa fa-close color-danger"></i></a></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kathryn Bernardo</td>
+                                                <td>September 23, 2022</td>
+                                                <td>Apr 20,2018</td>
+                                                <td>Vacation</td>
+                                                <td><span class="badge badge-danger">Declined</span>
+                                                <td><span><a href="javascript:void()" class="mr-4" data-toggle="tooltip"
+                                                            data-placement="top" title="Edit"><i
+                                                                class="fa fa-pencil color-muted"></i> </a><a
+                                                            href="javascript:void()" data-toggle="tooltip"
+                                                            data-placement="top" title="Close"><i
+                                                                class="fa fa-close color-danger"></i></a></span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+        
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="./vendor/global/global.min.js"></script>
+    <script src="./js/quixnav-init.js"></script>
+    <script src="./js/custom.min.js"></script>
+    
+
+
+
+</body>
+
+</html>
