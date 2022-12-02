@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Checko - Human Resource Information </title>
+    <title>Focus - Bootstrap Admin Dashboard </title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/logo-maroon.png">
-
-    <link href="./vendor/fullcalendar/css/fullcalendar.min.css" rel="stylesheet">
+    <!-- Datatable -->
+    <link href="./vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- Custom Stylesheet -->
     <link href="./css/style.css" rel="stylesheet">
 
 </head>
@@ -173,33 +174,54 @@
                 <ul class="metismenu" id="menu">
                     <li class="nav-label first">Main Menu</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                        class="icon icon-home"></i><span class="nav-text">Home</span></a>
+                                class="icon icon-home"></i><span class="nav-text">Home</span></a>
                         <ul aria-expanded="false">
-                            <li><a href="./emp-dashboard.html">Dashboard</a></li>
-                            <li><a href="./emp-timecard.html">Time In/ Time Out</a></li>
-                            <li><a href="./emp-leavereq.html">Leave Request</a></li>       
-                        </ul>
-            </li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
-                        class="icon icon-app-store"></i><span class="nav-text">Personal</span></a>
-                <ul aria-expanded="false">
-                    <li><a href="./emp-profile.html">Profile</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
-                        <ul aria-expanded="false">
-                            <li><a href="./emp-email-compose.html">Compose</a></li>
-                            <li><a href="./emp-email-inbox.html">Inbox</a></li>
-                            <li><a href="./emp-email-read.html">Read</a></li>
+                            <li><a href="./dashboard.html">Dashboard</a></li>
+                            <li><a href="./lates.html">Lates</a></li>
+                            <li><a href="./absences.html">Absences</a></li>
+                            <li><a href="./leave.html">Leaves</a></li>
+                            <li><a href="./resignation.html">Resignation</a></li>
+                            <li><a href="./overtime.html">Overtimes</a></li>
+                            
                         </ul>
                     </li>
-                    <li><a href="./emp-app-calender.html">Calendar</a></li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                                class="icon icon-app-store"></i><span class="nav-text">Company</span></a>
+                        <ul aria-expanded="false">
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Email</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="./email-compose.html">Compose</a></li>
+                                    <li><a href="./email-inbox.html">Inbox</a></li>
+                                    <li><a href="./email-read.html">Read</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./app-calender.html">Calendar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Tables and Reports</li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                                class="icon icon-layout-25"></i><span class="nav-text">Table</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="ranking.html">Ranking</a></li>
+                            <li><a href="leaveRequest.html">Leave Request</a></li>
+                            <li><a href="employeeInformation.html">Employee Information</a></li>
+                            <li><a href="trainings.html">Trainings</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+                                class="icon icon-layout-25"></i><span class="nav-text">Prediction</span></a>
+                        <ul aria-expanded="false">
+                            <li><a href="promotion.html">Promotion</a></li>
+                            <li><a href="resignationPredict.html">Resignation</a></li>
                 </ul>
             </li>
                     <li class="nav-label">General</li>
                     <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
                                 class="icon icon-single-copy-06"></i><span class="nav-text">Account</span></a>
                                 <ul aria-expanded="false">
-                                    <li><a href="emp-settings.html">Settings</a></li>
-                                    <li><a href="landingPage.html">Logout</a></li>
+                                    <li><a href="table-bootstrap-basic.html">Settings</a></li>
+                                    <li><a href="table-datatable-basic.html">Logout</a></li>
                                 </ul>
                     </li>    
 
@@ -217,107 +239,59 @@
         ***********************************-->
         <div class="content-body">
             <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Hi, welcome back!</h4>
+                            <p class="mb-0">This is the table for employee promotion prediction.</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- row -->
-
-
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-12">
                         <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Employee Promotion Prediction</h4>
+                            </div>
                             <div class="card-body">
-                                <h4 class="card-intro-title">Calendar</h4>
-
-                                <div class="">
-                                    <div id="external-events" class="my-3">
-                                        <p>Drag and drop your event or click in the calendar</p>
-                                        <div class="external-event" data-class="bg-primary"><i class="fa fa-move"></i>New Theme Release</div>
-                                        <div class="external-event" data-class="bg-success"><i class="fa fa-move"></i>My Event
-                                        </div>
-                                        <div class="external-event" data-class="bg-warning"><i class="fa fa-move"></i>Meet manager</div>
-                                        <div class="external-event" data-class="bg-dark"><i class="fa fa-move"></i>Create New theme</div>
-                                    </div>
-                                    <!-- checkbox -->
-                                    <div class="checkbox checkbox-event pt-3 pb-5">
-                                        <input id="drop-remove" class="styled-checkbox" type="checkbox">
-                                        <label class="ml-2 mb-0" for="drop-remove">Remove After Drop</label>
-                                    </div>
-                                    <a href="javascript:void()" data-toggle="modal" data-target="#add-category" class="btn btn-primary btn-event w-100">
-                                        <span class="align-middle"><i class="ti-plus"></i></span> Create New
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="card">
-                            <div class="card-body">
-                                <div id="calendar" class="app-fullcalendar"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- BEGIN MODAL -->
-                    <div class="modal fade none-border" id="event-modal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title"><strong>Add New Event</strong></h4>
-                                </div>
-                                <div class="modal-body"></div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success save-event waves-effect waves-light">Create
-                                        event</button>
-
-                                    <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal Add Category -->
-                    <div class="modal fade none-border" id="add-category">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title"><strong>Add a category</strong></h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label class="control-label">Category Name</label>
-                                                <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label class="control-label">Choose Category Color</label>
-                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
-                                                    <option value="success">Success</option>
-                                                    <option value="danger">Danger</option>
-                                                    <option value="info">Info</option>
-                                                    <option value="pink">Pink</option>
-                                                    <option value="primary">Primary</option>
-                                                    <option value="warning">Warning</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                                <div class="table-responsive">
+                                    <table id="example" class="display" style="min-width: 845px">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Promotion Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Britney Agravante</td>
+                                                <td>Full Stack Devloper</td>
+                                                <td><span class="badge badge-primary">YES</span>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <!--**********************************
             Content body end
         ***********************************-->
 
+        <!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
         
-
-
     </div>
     <!--**********************************
         Main wrapper end
@@ -330,17 +304,12 @@
     <script src="./vendor/global/global.min.js"></script>
     <script src="./js/quixnav-init.js"></script>
     <script src="./js/custom.min.js"></script>
-    <!--removeIf(production)-->
-    <!-- Demo scripts -->
-    <script src="./js/styleSwitcher.js"></script>
+    
 
 
-
-    <script src="./vendor/jqueryui/js/jquery-ui.min.js"></script>
-    <script src="./vendor/moment/moment.min.js"></script>
-
-    <script src="./vendor/fullcalendar/js/fullcalendar.min.js"></script>
-    <script src="./js/plugins-init/fullcalendar-init.js"></script>
+    <!-- Datatable -->
+    <script src="./vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="./js/plugins-init/datatables.init.js"></script>
 
 </body>
 
